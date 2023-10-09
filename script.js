@@ -10,9 +10,7 @@ function addText(){
         const li = document.createElement("li")
         li.innerHTML = inputBox.value
         listCont.append(li)
-        const span = document.createElement('span')
-        span.innerHTML = "\u00d7"
-        li.append(span)
+        
     }
     inputBox.value=""
     
@@ -21,7 +19,5 @@ function addText(){
 listCont.addEventListener('click', (event) => {
     if (event.target.tagName === 'LI') {
         event.target.classList.toggle('checked')
-    } else if (event.target.tagName === 'SPAN'){
-        event.target.parentElement.remove();
-    }
+    } 
 })
